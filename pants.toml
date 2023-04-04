@@ -1,0 +1,23 @@
+[GLOBAL]
+pants_version = "2.16.0rc0"
+backend_packages = ["pants.backend.python"]
+
+[source]
+root_patterns = ["/"]
+
+[python]
+interpreter_constraints = ["==3.8.*"]
+enable_resolves = true
+default_resolve = "default"
+
+[python.resolves]
+default = "default.lockfile"
+
+[pex-cli]
+version = "v2.1.128"
+known_versions = [
+    "v2.1.128|macos_arm64|a48a461a9e9f490476aa75976dbe58d3263691a8895a53d11fdaaf8a3bc223a5|4081603",
+    "v2.1.128|macos_x86_64|a48a461a9e9f490476aa75976dbe58d3263691a8895a53d11fdaaf8a3bc223a5|4081603",
+    "v2.1.128|linux_x86_64|a48a461a9e9f490476aa75976dbe58d3263691a8895a53d11fdaaf8a3bc223a5|4081603",
+    "v2.1.128|linux_arm64|a48a461a9e9f490476aa75976dbe58d3263691a8895a53d11fdaaf8a3bc223a5|4081603"
+]
